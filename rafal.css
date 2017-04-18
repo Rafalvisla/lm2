@@ -44,3 +44,8 @@ header.sticky.stuck > .inner > .container.group */
 .container.group {
   border-bottom: 1px solid #D0D9E5;
 } 
+
+.text.form-control {
+  height: 50px;
+  padding-top: 10px;
+}
