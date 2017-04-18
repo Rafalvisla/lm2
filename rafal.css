@@ -5,5 +5,6 @@ footer.footer {
   background-color: #16407D;
 }
 .shop_order_shipping_title {
-  font-family: "Arial";
+  color: red;
+  font-family: "Times New Roman";
 }
