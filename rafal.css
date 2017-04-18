@@ -4,7 +4,14 @@
 footer.footer {
   background-color: #16407D;
 }
-.shop_order_shipping_title {
+/*.shop_order_shipping_title {
+  color: #16407D;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 0px;
+}*/
+#shop_order_shipping_title h2 {
   color: #16407D;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
