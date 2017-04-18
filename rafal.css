@@ -36,5 +36,7 @@ header.sticky.stuck > .inner > .container.group */
   border: 0px;
 }
 #small_logo {
-  margin: 16px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #D0D9E5;
 }
