@@ -23,3 +23,6 @@ footer.footer {
 #country_list {
   display: none;
 }
+footer.footer h3 {
+  text-align: center;
+}
