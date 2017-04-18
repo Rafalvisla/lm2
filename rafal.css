@@ -14,6 +14,11 @@ footer.footer {
   font-size: 15px;
   text-align:left;
 }
+#shop_order_form label[for=shop_order_comment] {
+  font-weight: bold;
+  font-size: 15px;
+  text-align:left;
+}
 .new_form span label {
   font-family: 'Open Sans', sans-serif;
   color: #16407D;
