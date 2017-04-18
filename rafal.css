@@ -26,6 +26,7 @@ footer.footer {
 footer.footer h3 {
   text-align: center;
 }
-.containter group {
+/* @media (max-width: 1024px) */
+header.sticky.stuck > .inner > .container.group {
   border-bottom: 0px;
 }
