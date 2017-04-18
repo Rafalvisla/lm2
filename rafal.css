@@ -35,3 +35,6 @@ header.sticky.stuck > .inner > .container.group */
 .header .inner {
   border: 0px;
 }
+#small_logo {
+  margin: 16px;
+}
