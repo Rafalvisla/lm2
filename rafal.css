@@ -20,3 +20,6 @@ footer.footer {
   color: #16407D;
   font-size: 13px;
 }
+#country_list {
+  display: none;
+}
