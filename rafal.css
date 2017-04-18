@@ -33,7 +33,7 @@ header.sticky.stuck > .inner > .container.group */
 }
 
 .header .inner {
-  border: 10px solid red;
+  border: 0px;
 }
 
 #small_logo {
