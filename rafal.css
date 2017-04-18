@@ -26,3 +26,6 @@ footer.footer {
 footer.footer h3 {
   text-align: center;
 }
+.containter group {
+  border-bottom: 0px;
+}
