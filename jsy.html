@@ -1,0 +1,36 @@
+<script>
+  $('.product-extra .info h3 a').each(function() {
+                 var categories = ["KOCYK","PODUSIA","ZESTAW","OTULACZ","BLANKET","KOC","WINGS","BAG","PILLOW","KOMPLET","POŚCIEL","ORGANIZER","OCHRANIACZ",
+                    "POZYTYWKA","HORN","PRZEŚCIERADŁO","PACK","TORBA","PASEK","PRZEWIJAK","SASZETKA","KOLEKCJA","ŚPIWOREK","PAD","COVER","KURA","COMBO",
+                    "THERMO", "GRZECHOTKA","PLECAK","MAT","KAPELUSZ", "CHUSTKA"];
+
+                   var full_name = $(this).html();      
+                   var names = full_name.split('-');
+                   var i = 0;
+                   var title = "";
+                   var subtitle = "";
+             
+                   while (names.length > i) {
+                     if (names[i].match(/[a-z]/i)) {
+                         if ( categories.some(function(v) {return names[i].includes(v);})) {
+                           subtitle = add (subtitle, names[i]);
+                         } else {
+                           if (!(title.match(/[a-z]/i))) {
+                             title = names[i];
+                           } else {
+                             subtitle = add (subtitle, names[i]);
+                           }
+                         }
+                     }
+                     i++;
+                   }
+                   title = title.toLowerCase();
+                   $(this).html('<div class="title">' + title + '</div>' + '<div class="subtitle">' + subtitle + '</div>');        
+               });
+                       
+               function add(word1, word2) {
+                if (word1.match(/[a-z]/i)) {
+                  return word1 + "|" + word2;
+                } else return word2;
+               };
+</script>
