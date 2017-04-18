@@ -41,6 +41,6 @@ header.sticky.stuck > .inner > .container.group */
   margin-bottom: 10px;
 }
 
-.container .group {
+.container.group {
   border-bottom: 1px solid #D0D9E5;
 } 
