@@ -19,6 +19,7 @@ footer.footer {
   font-family: 'Open Sans', sans-serif;
   color: #16407D;
   font-size: 13px;
+  padding-bottom: 3px;
 }
 #country_list {
   display: none;
@@ -46,6 +47,5 @@ header.sticky.stuck > .inner > .container.group */
 } 
 
 .text.form-control {
-  height: 50px;
-  padding-top: 10px;
+  height: 42px;
 }
