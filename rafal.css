@@ -12,6 +12,10 @@ footer.footer {
 #shop_order_form h2 {
   font-weight: bold;
   font-size: 15px;
-  margin-left: 0px;
   text-align:left;
+}
+.new_form span label {
+  font-family: 'Open Sans', sans-serif;
+  color: #16407D;
+  font-size: 13px;
 }
