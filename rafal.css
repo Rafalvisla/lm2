@@ -31,3 +31,7 @@ header.sticky.stuck > .inner > .container.group */
 .container .group {
   border-bottom: 0px;
 }
+
+.header .inner {
+  border: 0px;
+}
