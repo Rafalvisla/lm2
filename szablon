@@ -1,0 +1,352 @@
+<!doctype html>
+<!--Conditionals for IE8-9 Support-->
+<!--[if IE]><html lang="en" class="ie"><![endif]-->
+<html>
+  <head>
+  <title>{{page.title}}{{page.is_prod}}</title>
+      
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-language" content="{{page.lang}}" />
+
+  <meta name="robots" content="all" />
+  <meta name="author" content="Siteor.pl" />
+  <meta name="description" content="{{page.html_description}}" />
+  <meta name="keywords" content="{{page.html_keywords}}"/>
+
+  <link rel="shortcut icon" href="/pagelayout/lamillou/favicon.ico" /> 
+
+  <!--Mobile Specific Meta Tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+  <link rel="stylesheet" href="//d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/jquery.jgrowl.css?1465987349">
+  
+  <!-- COMBINED: masterslider + styles + colors + overwrites + font awesome -->
+  <link rel="stylesheet" href="/pagelayout/lamillou2015/css/combined.min.css">
+  <link rel="stylesheet" href="/pagelayout/lamillou2015/css/combined2.css">
+    
+    
+    
+    
+  <!-- rafal -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/Rafalvisla/lm2/921db9de/rafal.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    
+  <!-- Scripts needed before body -->
+  <script src="/pagelayout/lamillou2015/js/plugins/masterslider.min.js"></script>
+
+    
+  <style>
+    .sticky-wrapper {height: 5px !important;}
+    
+    p {font-size: 13px;}
+    
+    .nowy-order-steps {
+    margin-top: 50px;
+    }
+    
+    .table-cell {
+    	font-size: 13px;
+    	font-weight: bold;
+    	padding-left: 20px;
+    	padding-right: 20px;
+    	color: #16407D;
+    }
+    
+    footer.footer h3 {
+  		text-align: center;
+  		font-size: 24px;
+    	font-weight: normal;
+    	margin-bottom: 10px;
+	}
+    
+    footer.footer .copyright {
+    	display: none;
+    }
+    
+    footer.footer .contacts {
+    float: left;
+    width: 33%;
+    }
+    
+    footer.footer .contact-img {
+    height: 33px;
+    padding-top: 10px;
+    margin-bottom: 12px;
+    }
+    
+    .contact-img img {
+    display: block;
+    padding-bottom: 10px;
+    }
+    
+    footer.footer .contacts h3{
+    	font-family: 'Open Sans', sans-serif !important;
+    	font-size: 15px;
+    }
+    
+    .shop_order_payment_title, .shop_order_delivery_title, .dane_adresowe {
+    color: #16407D;
+    font-size: 15px;
+    }
+    
+    .dane_adresowe {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px !important;
+    }
+    
+    .shop_order_email_confirmation {
+    display: none;
+    }
+   
+    input[type=radio], input[type=checkbox] {
+    width: 26px !important;
+    height: 26px !important;
+    }
+    
+    input[type="checkbox" i] {
+    width: 56px;
+    height: 56px;
+    }
+   
+    @media only screen and (max-width: 500px) {
+        .continue_shopping.left {
+    	display: none;
+        background-color: red;
+        }
+        #order_last_step .buttons.panel a.continue_with_order.right, #shop_order_form .buttons.panel a.continue_with_order.right {
+      	width: 240px;
+    	height: 50px;
+    	font-size: 15px !important;
+ 		}
+    #order_last_step .buttons.panel a, #shop_order_form .buttons.panel a {
+    	padding-top: 14px !important;
+    	}
+        .continue_with_order.right {
+    	height: 50px;
+        }
+    }
+  </style>    
+    
+ </head>
+
+ <body class="parallax animated fadeIn">
+
+    <!--Off-Canvas-->
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+      
+        <!--Off-Canvas Menu-->
+        <aside class="left-off-canvas-menu">
+          <div class="mobile-navi">
+            <!--  Quick search responsive  -->
+            <cms:component type="lamillou_shop_search_responsive"/>
+            <!--<ul class="buttons">
+              <li class="lang" id="resp-lang"><a href="https://en.lamillou.com" style="text-transform:none;">English</a>
+              </li>
+            </ul>-->
+            <cms:component type="lamillou_user_responsive"/>
+            <cms type="menu" kind="tree_toggled" from="2" ></cms>
+          </div>
+        </aside><!--Off-Canvas Menu Close-->
+        
+        <!--Layout-->
+        <div class="site-layout">     
+
+          <!--Header Toolbar-->
+          <div class="header-toolbar" style="height:95px;">
+            <div class="container" id="top_container">
+				<!--
+              <ul class="tools" id="lm-tools2">
+                <li class="lang"><a href="https://en.lamillou.com">English</a>
+                </li>
+              </ul>
+				-->
+              <!--Logo big-->
+              <a class="logo" id="main_logo" href="{{portal.url}}"><img src="//d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/logo.png" alt="{{page.title}}" style="height:95px;margin-top:-10px;" /></a>
+              <div class="cont-info">
+
+              </div>
+
+              <ul class="tools" id="lm-tools">
+
+                <cms:component type="lamillou_user_top"/>
+              
+                <li class="cart" id="lm-cart">
+                  <a href="/cart"><i class="fa fa-shopping-bag cart-icon"></i>&nbsp;KOSZYK (<span class="shop_cart_simple"><i class="fa fa-spin fa-refresh"></i></span>)</a>
+                  <ul id="cart-dropdown" class="shop_cart_detailed">
+                    <p><br /><i class="fa fa-spin fa-refresh fa-2x"></i></p>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+          </div><!--Header Toolbar Close-->
+          
+
+          <header class="header sticky">
+            <div class="inner" style="height:1px;">
+              <div class="container group">
+                <!--Logo-->
+                <a class="logo" id="small_logo" href="{{portal.url}}"><img src="https://d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/Logo_Simplified.svg?1492516512" alt="{{page.title}}"/></a>
+                
+                <!--Navigation Toggle
+                <div class="left-off-canvas-toggle" id="nav-toggle">
+                  <span></span>
+                </div>
+
+                <div id="res-cart">
+                  <a class="link" href="/cart">
+                    <span class="shop_cart_simple"><i class="fa fa-spin fa-refresh"></i></span>
+                  </a>
+                </div>-->
+                
+                <!--Site Navigation-->
+                <div class="navigation">
+                  <!--Menu-->
+                  <nav class="menu">
+                    <ul>
+                        
+                    </ul>
+                  </nav>
+                </div>
+                
+              </div>
+            </div>
+              
+          </header><!--Header Close-->
+   
+        <!--Page Content-->
+        <div class="page {{page.var1}}">
+
+            <cms type="box" id="1"></cms>
+
+        </div>
+          
+        <!--Page Content Close-->
+        
+        <!--Footer-->
+          <footer class="footer">
+
+            <div class="container space-top">
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+                  <h3>Masz pytania?</h3>
+                </div>
+              </div>
+              <div class="row">
+                
+                <!--nowy-->
+                <div class="col-md-12 col-sm-12">
+                  <div class="contacts">
+                    <div class="contact-img">
+                    	<img src="https://d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/email.svg?1492520890">
+                    </div>
+                    <h3 class="contact-links">Email</h3>
+                    <cms type="box" id="500"></cms>
+                  </div>
+                  <div class="contacts">
+                    <div class="contact-img">
+                    	<img src="https://d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/telefon.svg?1492520890">
+                    </div>
+                    <h3 class="contact-links">Telefon</h3>
+                    <cms type="box" id="501"></cms>
+                  </div>
+                  <div class="contacts">
+                    <div class="contact-img">
+                    	<img src="https://d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/faq.svg?1492520889">
+                    </div>
+                    <h3 class="contact-links">FAQ</h3>
+                    <cms type="box" id="503"></cms>
+                  </div>
+                </div>
+                  
+                  
+                                
+
+              </div>
+            </div>
+            
+            <!--Copyright-->
+            <div class="copyright text-center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6 text-left">
+                    <p>&copy; {{year}} La Millou -  {{powered_by}}</p>
+                  </div>
+                  <div class="col-xs-12 col-md-6 text-right">
+                        <div class="social-bar">
+                         <a href="https://www.facebook.com/LaMillouOfficialSite" target="_blank" class="tooltipped fa fa-facebook" data-placement="top" title="Facebook"></a>
+                         <a href="https://www.pinterest.com/La_Millou_/" target="_blank" class="tooltipped fa fa-pinterest" data-placement="top" title="Pinterest"></a>
+                         <a href="https://plus.google.com/100967316413611804091" target="_blank" class="tooltipped fa fa-google-plus" data-placement="top" title="Google+" rel="publisher"></a>
+                         <a href="https://instagram.com/la_millou/" target="_blank" class="tooltipped fa fa-instagram" data-placement="top" title="Instagram"></a>
+                         <a href="https://www.youtube.com/channel/UCf43HTml8GDEmTBFu56y79Q" target="_blank" class="tooltipped fa fa-youtube" data-placement="top" title="YouTube"></a>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer><!--Footer Close-->
+        
+        </div><!--Layout Close-->
+        
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div><!--Off-Canvas Close-->
+    
+    <!-- rzeczy dodane aby je przenosic jquery -->
+          <h2 class="dane_adresowe col-sm-6 col-xs-12">DANE ADRESOWE</h2>
+          <div class="nowy-order-steps">
+            <div class="table-cell active"><span>1. ADRES</span></div>
+            <div class="table-cell"><span>2. PODSUMOWANIE</span></div>
+          </div>
+          
+    <script src="//d1dmfej9n5lgmh.cloudfront.net/lamillou/files/layout/all.js?1464700042"></script>
+	  <!--<script src="https://cdn.rawgit.com/Rafalvisla/lm2/2cbaf000/jsfile.js"></script>-->
+   <script>
+    $('#order_last_step .buttons.panel a.continue_with_order.right, #shop_order_form .buttons.panel a.continue_with_order.right').each(function() {
+    $(this).html('FINALIZUJ ZAMÓWIENIE');        
+    });
+     
+    $('.shop_order_shipping_title').each(function() {
+    $(this).html('TWOJE DANE');        
+    });
+     
+    $('.shop_order_delivery_title').each(function() {
+    $(this).html('WYBIERZ SPOSÓB DOSTAWY');        
+    });
+
+    $('.shop_order_payment_title').each(function() {
+    $(this).html('WYBIERZ SPOSÓB PŁATNOŚCI');        
+    });
+        
+    $('label[for=shop_order_phone]').each(function() {
+    $(this).html('Telefon (opcjonalnie)');        
+    });
+     
+     $('label[for=shop_order_email_confirmation]').parent().detach();
+     
+     $('#order-steps').detach();
+     $('.nowy-order-steps').insertAfter( $('.page-heading').parent());
+      
+     $('.dane_adresowe').insertAfter( $('label[for=shop_order_last_name]').parent());
+     
+     //document.write('aaaaaaaa').insertAfter($('label[for=shop_order_last_name]').parent());
+     //$(this).html('NOWY KOD HTML').insertAfter($('label[for=shop_order_last_name]').parent());
+    
+	$('label[for=shop_order_phone]').parent().detach().insertAfter($('label[for=shop_order_last_name]').parent());
+    $('label[for=shop_order_email]').parent().detach().insertAfter($('label[for=shop_order_last_name]').parent());
+     
+     
+     
+     //$('label[for=shop_order_last_name]').parent().insertAfter($('label[for=shop_order_phone]').parent());
+
+   </script>
+  </body>
+
+</html>
+
+
