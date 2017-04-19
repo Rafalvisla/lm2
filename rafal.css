@@ -50,7 +50,8 @@ header.sticky.stuck > .inner > .container.group */
   height: 42px;
 }
 
-//copyright
+/*copyright*/
 .copyright {
-display: none;
+  color: red;
+  /*display: none;*/
 }
