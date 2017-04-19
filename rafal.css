@@ -24,9 +24,7 @@ footer.footer {
 #country_list {
   display: none;
 }
-footer.footer h3 {
-  text-align: center;
-}
+
 /* @media (max-width: 1024px)
 header.sticky.stuck > .inner > .container.group */
 .container .group {
