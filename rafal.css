@@ -49,3 +49,8 @@ header.sticky.stuck > .inner > .container.group */
 .text.form-control {
   height: 42px;
 }
+
+//copyright
+.copyright {
+display: none;
+}
