@@ -9,12 +9,7 @@ footer.footer {
   font-family: 'Open Sans', sans-serif;
 }
 
-.new_form span label, #shop_order_form label[for=shop_order_comment] {
-  font-family: 'Open Sans', sans-serif;
-  color: #16407D;
-  font-size: 13px;
-  padding-bottom: 3px;
-}
+
 #country_list {
   display: none;
 }
