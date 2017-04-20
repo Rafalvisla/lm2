@@ -9,12 +9,6 @@ footer.footer {
   font-family: 'Open Sans', sans-serif;
 }
 
-#shop_order_form h2 {
-  font-weight: bold;
-  font-size: 15px;
-  text-align:left;
-}
-
 .new_form span label, #shop_order_form label[for=shop_order_comment] {
   font-family: 'Open Sans', sans-serif;
   color: #16407D;
